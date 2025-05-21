@@ -1,0 +1,234 @@
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #623F04;
+    --dark-bg: #1e1e1e;
+    --darker-bg: #252526;
+    --lighter-dark: #333;
+    --text-light: #d4d4d4;
+    --text-lighter: #fff;
+    --border-color: #404040;
+}
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.exercise-container {
+    display: flex;
+    height: 100vh;
+    background: var(--dark-bg);
+}
+
+/* Description Panel */
+.description-panel {
+    width: 350px;  /* ลดความกว้างจาก 400px */
+    min-width: 300px;
+    background: var(--darker-bg);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise-nav {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--darker-bg);
+}
+
+.back-btn {
+    color: var(--text-lighter);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.back-btn:hover {
+    color: var(--primary-color);
+}
+
+.exercise-details {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.exercise-details h1 {
+    color: var(--text-lighter);
+    margin-bottom: 1rem;
+}
+
+.exercise-description {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Editor Panel */
+.editor-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.editor-toolbar {
+    padding: 12px 20px;
+    background: var(--darker-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-actions button {
+    background: var(--darker-bg);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;  /* เพิ่มขนาดปุ่ม */
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.editor-actions button:hover {
+    background: var(--primary-color);
+    color: var(--text-lighter);
+    border-color: var(--primary-color);
+}
+
+.code-area {
+    flex: 1;
+    min-height: 60vh;  /* เพิ่มความสูงขั้นต่ำ */
+    position: relative;
+}
+
+#monaco-editor {
+    width: 100%;
+    height: 100% !important;  /* บังคับความสูง */
+    font-size: 16px !important;  /* เพิ่มขนาดฟอนต์ */
+    font-family: 'Fira Code', monospace !important;
+}
+
+/* Output Panel */
+.output-panel {
+    height: 250px;  /* เพิ่มความสูง */
+    max-height: 30vh;
+    background: var(--darker-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.output-header {
+    padding: 10px 15px;
+    background: var(--darker-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.output-area {
+    padding: 15px 20px;
+    margin: 0;
+    height: calc(100% - 41px);
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    background: var(--dark-bg);
+    color: var(--text-light);
+    font-size: 15px;  /* เพิ่มขนาดฟอนต์ */
+}
+
+/* Hints Section */
+.hints-section {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.hint-card {
+    background: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.hint-trigger {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.hint-trigger:hover {
+    background: var(--lighter-dark);
+}
+
+.hint-content {
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    background: var(--darker-bg);
+}
+
+/* Notifications */
+.save-notification, .error-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+    font-family: 'Kanit', sans-serif;
+}
+
+.save-notification {
+    background: #4CAF50;
+    color: white;
+}
+
+.error-notification {
+    background: #f44336;
+    color: white;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .description-panel {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exercise-container {
+        flex-direction: column;
+    }
+    
+    .description-panel {
+        width: 100%;
+        height: auto;
+        max-height: 40vh;
+    }
+    
+    .code-area {
+        min-height: 40vh;
+    }
+}

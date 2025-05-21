@@ -1,0 +1,352 @@
+.course-filters {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-bar i {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.filter-options select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.filter-options select option {
+    background: #333;
+    color: white;
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-image {
+    height: 150px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.course-image i {
+    font-size: 3rem;
+    color: #FFD700;
+}
+
+.difficulty {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.difficulty.beginner { background: #4CAF50; }
+.difficulty.intermediate { background: #FFC107; }
+.difficulty.advanced { background: #F44336; }
+
+.course-content {
+    padding: 2rem;
+}
+
+.course-title {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.course-stats {
+    display: flex;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.course-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.start-course-btn {
+    display: block;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.start-course-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.course-header {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.course-header h1 {
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-icon i {
+    font-size: 2rem;
+    color: #FFD700;
+}
+
+.difficulty-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.difficulty-badge.beginner { background-color: #4CAF50; }
+.difficulty-badge.intermediate { background-color: #FFA000; }
+.difficulty-badge.advanced { background-color: #F44336; }
+
+.course-content h3 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.course-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.course-meta i {
+    color: #FFD700;
+}
+
+.course-progress {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.search-box i {
+    color: #FFD700;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-group select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.filter-group select:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.filter-group select option {
+    background: #2d2d2d;
+    color: white;
+}
+
+.category-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.category-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Kanit', sans-serif;
+}
+
+.category-tab i {
+    color: #FFD700;
+}
+
+.category-tab.active {
+    background: #FFD700;
+    color: black;
+}
+
+.category-tab.active i {
+    color: black;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .course-filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        flex-direction: column;
+    }
+
+    .search-box {
+        min-width: 100%;
+    }
+
+    .category-tabs {
+        padding-bottom: 1rem;
+    }
+
+    .course-header {
+        padding: 1.5rem;
+    }
+
+    .course-content {
+        padding: 1.5rem;
+    }
+}
