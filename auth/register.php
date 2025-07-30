@@ -8,14 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // Validation
     $errors = [];
     
     if ($password !== $confirm_password) {
         $errors[] = "Passwords do not match";
     }
 
-    // Check if username exists
     $stmt = $pdo->prepare("SELECT username FROM users WHERE username = ?");
     $stmt->execute([$username]);
     if ($stmt->rowCount() > 0) {
