@@ -19,10 +19,10 @@ INSERT INTO achievements (achievement_id, title, description, icon_url, points) 
 (5, 'Python Master', 'จบคอร์ส Python ขั้นสูง', '/assets/icons/python-master.png', 100);
 
 INSERT INTO user_achievements (user_id, achievement_id) VALUES
-(4, 1), -- BDC student gets "เริ่มต้นการเรียนรู้"
-(4, 2), -- BDC student gets "นักเรียนขยัน"
-(5, 1), -- Another BDC student gets "เริ่มต้นการเรียนรู้"
-(6, 1); -- Regular student gets "เริ่มต้นการเรียนรู้"
+(4, 1), -- "เริ่มต้นการเรียนรู้"
+(4, 2), --"นักเรียนขยัน"
+(5, 1), -- "เริ่มต้นการเรียนรู้"
+(6, 1); -- "เริ่มต้นการเรียนรู้"
 
 INSERT INTO code_progress (user_id, exercise_id, current_code) VALUES
 (4, 1, 'def hello_world():\n    print("Hello, World!")'),
