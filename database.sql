@@ -152,8 +152,3 @@ CREATE TABLE user_hints (
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (hint_id) REFERENCES hints(hint_id)
 );
-
--- ลบตารางเหล่านี้ออก
--- CREATE TABLE certificate_templates
--- CREATE TABLE user_certificates
--- CREATE TABLE competitions
